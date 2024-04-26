@@ -168,12 +168,15 @@ public class VMMetricsView extends SuspendableViewImpl implements VMMetricsPrese
         uptime = uptime / 1000;
 
         int sec = (int) uptime % 60;
+        uptime -= sec;
         uptime /= 60;
 
         int min = (int) uptime % 60;
+        uptime -= min;
         uptime /= 60;
 
         int hour = (int) uptime % 24;
+        uptime -= hour;
         uptime /= 24;
 
         int day = (int) uptime;
